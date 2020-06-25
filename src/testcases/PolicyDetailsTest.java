@@ -95,7 +95,7 @@ public class PolicyDetailsTest extends BasePage{
 	  
 	  polDetails.setInsureDoc(true);
 	  
-	  Thread.sleep(5000);
+	  Thread.sleep(2000);
 	  Boolean value=polDetails.setButton(false);
 	  
       String errorMessage=polDetails.getIncorrectValueErrorMessage();
