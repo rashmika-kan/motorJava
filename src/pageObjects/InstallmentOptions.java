@@ -13,10 +13,18 @@ public class InstallmentOptions {
 	By twopay=By.xpath("/html/body/app-root/app-tab/mat-tab-group/div/mat-tab-body[1]/div/app-mtpl-calculator/div/mat-horizontal-stepper/div[2]/div[4]/app-installment/form/div[1]/div[2]/div[1]/div[1]/label/input");
 	By onepay=By.xpath("/html/body/app-root/app-tab/mat-tab-group/div/mat-tab-body[1]/div/app-mtpl-calculator/div/mat-horizontal-stepper/div[2]/div[4]/app-installment/form/div[1]/div[1]/div/div[1]/label/input");
 	By btn=By.xpath("/html/body/app-root/app-tab/mat-tab-group/div/mat-tab-body[1]/div/app-mtpl-calculator/div/mat-horizontal-stepper/div[2]/div[4]/app-installment/form/button");
-	By title=By.xpath("//*[@id=\"cdk-step-content-0-4\"]/app-additional-covers/h1/b");
+	By title=By.xpath("/html/body/app-root/app-tab/mat-tab-group/div/mat-tab-body[1]/div/app-mtpl-calculator/div/mat-horizontal-stepper/div[2]/div[5]/app-additional-covers/h1");
   public InstallmentOptions(WebDriver driver) {
 	  this.driver=driver;
   }
+  
+	 public void validInstallmentOptions() {
+		 WebElement four=driver.findElement(this.fourpay);
+		  JavascriptExecutor executor = (JavascriptExecutor)driver;
+		  executor.executeScript("arguments[0].click();",four);
+		  WebElement submit=driver.findElement(this.btn);
+		  executor.executeScript("arguments[0].click();",submit);
+		  }
 	
   public WebElement setPaymentFour(boolean value) {
 	  WebElement four=driver.findElement(this.fourpay);

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.InstallmentOptionsTest">
+      <class name="testcases.AdditionalCoversTest">
         <methods>
+          <include name="validAdditionalCovers"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="installmentOptionsValid"/>
         </methods>
-      </class> <!-- testcases.InstallmentOptionsTest -->
+      </class> <!-- testcases.AdditionalCoversTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

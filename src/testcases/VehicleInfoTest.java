@@ -12,18 +12,20 @@ public class VehicleInfoTest extends BasePage{
   @Test
   public void vehicleInfoValid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
+	  Thread.sleep(5000);
 	  VehicleInfo vInfo=new VehicleInfo(driver);
 	  vInfo.setRegistrationNumber("12345678");
 	  
 	  vInfo.setCertificationNumber("123456789");
 	  vInfo.setPurpose(1);
 	  
+	  vInfo.setDrivingOutside("No");
+	  
 	  Boolean value=vInfo.setButton(true);
 	  String text=vInfo.getTitle();
 	  
-	  Thread.sleep(5000);
 	  System.out.println("Is button enabled: "+value);
 	  System.out.println("Submit successful.Moves to the insuring party page.");
 	  
@@ -35,7 +37,7 @@ public class VehicleInfoTest extends BasePage{
   @Test
   public void vehicleInfoEmptyValueInvalid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
 	  VehicleInfo vInfo=new VehicleInfo(driver);
 	  vInfo.setRegistrationNumber("12345678");
@@ -59,7 +61,7 @@ public class VehicleInfoTest extends BasePage{
   @Test
   public void vehicleInfoIncorrectValueInvalid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
 	  VehicleInfo vInfo=new VehicleInfo(driver);
 	  vInfo.setRegistrationNumber("1234567");

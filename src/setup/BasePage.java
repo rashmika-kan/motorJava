@@ -16,7 +16,7 @@ protected WebDriver driver;
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\RASHMIKA\\Desktop\\chromedriver.exe");
 		  driver=new ChromeDriver();
-		  driver.get("http://localhost:4200/");
+		  driver.get("http://localhost:3001/");
 		  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		  driver.manage().window().maximize();
 	}

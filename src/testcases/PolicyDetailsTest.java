@@ -16,16 +16,16 @@ public class PolicyDetailsTest extends BasePage{
   @Test(priority=0)
   public void policyDetailsValid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
 	  VehicleInfo vInfo=new VehicleInfo(driver);
-	  vInfo.VehicleInfoValid("12345678", "123456789", 1);
+	  vInfo.VehicleInfoValid("12345678", "123456789", 1,"Yes");
 	  
 	  InsuringParty insurePty=new InsuringParty(driver);
 	  insurePty.validInsuringParty("1234567899", 1, "random@gmail.com");
 	  
 	  PolicyDetails polDetails=new PolicyDetails(driver);
-	  polDetails.setDate("06/29/2020");
+	  polDetails.setDate("07/30/2020");
 	  
 	  polDetails.setLength(2);
 	  polDetails.setInsureDoc(true);
@@ -46,10 +46,10 @@ public class PolicyDetailsTest extends BasePage{
   @Test(priority=1)
   public void policyDetailsEmptyValueInvalid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
 	  VehicleInfo vInfo=new VehicleInfo(driver);
-	  vInfo.VehicleInfoValid("12345678", "123456789", 1);
+	  vInfo.VehicleInfoValid("12345678", "123456789", 1,"Yes");
 	  
 	  InsuringParty insurePty=new InsuringParty(driver);
 	  insurePty.validInsuringParty("1234567899", 1, "random@gmail.com");
@@ -79,16 +79,16 @@ public class PolicyDetailsTest extends BasePage{
   @Test(priority=2)
   public void policyDetailsIncorrectValueInvalid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
 	  VehicleInfo vInfo=new VehicleInfo(driver);
-	  vInfo.VehicleInfoValid("12345678", "123456789", 1);
+	  vInfo.VehicleInfoValid("12345678", "123456789", 1,"Yes");
 	  
 	  InsuringParty insurePty=new InsuringParty(driver);
 	  insurePty.validInsuringParty("1234567899", 1, "random@gmail.com");
 	  
 	  PolicyDetails polDetails=new PolicyDetails(driver);
-	  polDetails.setDate("06/29/2020");
+	  polDetails.setDate("07/30/2020");
 	  
 	  polDetails.setLength(2);
 	  polDetails.setProtectInfo(false);

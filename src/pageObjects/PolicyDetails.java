@@ -13,7 +13,7 @@ public class PolicyDetails {
 	By length=By.cssSelector("select[formControlName=policyLength]");
 	By protectInfo=By.cssSelector("input[formControlName=check1]");
 	By insureDoc=By.cssSelector("input[formControlName=check2]");
-	By btn=By.xpath("//*[@id=\"cdk-step-content-0-2\"]/app-policy-details/button");
+	By btn=By.xpath("/html/body/app-root/app-tab/mat-tab-group/div/mat-tab-body[1]/div/app-mtpl-calculator/div/mat-horizontal-stepper/div[2]/div[3]/app-policy-details/form/button");
 	By title=By.xpath("//*[@id=\"cdk-step-content-0-3\"]/app-installment/h1");
 	By emptydateError=By.xpath("//*[@id=\"cdk-step-content-0-2\"]/app-policy-details/form/div[1]/div[2]/div/div");
 	By uncheckedInfoError=By.xpath("//*[@id=\"cdk-step-content-0-2\"]/app-policy-details/form/div[4]/div");

@@ -15,10 +15,10 @@ public class InsuringPartyTest extends BasePage{
   @Test(priority=0)
   public void insuringPartyValid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
 	  VehicleInfo vInfo=new VehicleInfo(driver);
-	  vInfo.VehicleInfoValid("12345678", "123456789", 1);
+	  vInfo.VehicleInfoValid("12345678", "123456789", 1,"Yes");
 	  
 	  InsuringParty insurePty=new InsuringParty(driver);
 	  insurePty.setEgn("1234567899");
@@ -43,10 +43,10 @@ public class InsuringPartyTest extends BasePage{
   @Test(priority=1)
   public void insuringPartyEmptyValueInvalid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
 	  VehicleInfo vInfo=new VehicleInfo(driver);
-	  vInfo.VehicleInfoValid("12345678", "123456789", 1);
+	  vInfo.VehicleInfoValid("12345678", "123456789", 1,"Yes");
 	  
 	  InsuringParty insurePty=new InsuringParty(driver);
 	  WebElement email=insurePty.setEmail(null);
@@ -73,10 +73,10 @@ public class InsuringPartyTest extends BasePage{
   @Test(priority=2)
   public void insuringPartyIncorrectValueInvalid() throws InterruptedException {
 	  Login login=new Login(driver);
-	  login.signUp("admin", "admin");
+	  login.signUp("rashmika@infy.com", "rashmika123","rashmika");
 	  
 	  VehicleInfo vInfo=new VehicleInfo(driver);
-	  vInfo.VehicleInfoValid("12345678", "123456789", 1);
+	  vInfo.VehicleInfoValid("12345678", "123456789", 1,"Yes");
 	  
 	  InsuringParty insurePty=new InsuringParty(driver);
 	  insurePty.setEgn("1234567");
