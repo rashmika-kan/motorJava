@@ -24,7 +24,7 @@ public class AdditionalCoversTest extends BasePage{
 	  insurePty.validInsuringParty("1234567899", 1, "random@gmail.com");
 	  
 	  PolicyDetails polDetails=new PolicyDetails(driver);
-	  polDetails.policyDetailsValid("06/29/2020", 2);
+	  polDetails.policyDetailsValid("07/30/2020", 2);
 	  
 	  InstallmentOptions option=new InstallmentOptions(driver);
 	  option.validInstallmentOptions();
@@ -32,10 +32,10 @@ public class AdditionalCoversTest extends BasePage{
 	  AdditionalCovers cover=new AdditionalCovers(driver);
 	  cover.setPremium(true);
 	  
-	  Thread.sleep(5000);
+	  Thread.sleep(2000);
 	  Boolean value=cover.setButton(true);
 	  
-	  Thread.sleep(5000);
+	  Thread.sleep(2000);
       String text=cover.getTitle();
 	  
 	  System.out.println("Is button enabled: "+value);

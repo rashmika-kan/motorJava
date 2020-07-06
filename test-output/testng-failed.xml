@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.AdditionalCoversTest">
+      <class name="testcases.PersonalDetailsTest">
         <methods>
-          <include name="validAdditionalCovers"/>
+          <include name="personalDetailsIncorrectValue"/>
+          <include name="personalDetailsValid"/>
           <include name="setup"/>
+          <include name="personalDetailsEmptyValue"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- testcases.AdditionalCoversTest -->
+      </class> <!-- testcases.PersonalDetailsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

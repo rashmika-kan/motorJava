@@ -1,6 +1,7 @@
 package testcases;
 
 import org.junit.Assert;
+
 import org.testng.annotations.Test;
 
 import pageObjects.InstallmentOptions;
@@ -28,10 +29,10 @@ public class InstallmentOptionsTest extends BasePage{
 	  InstallmentOptions option=new InstallmentOptions(driver);
 	  option.setPaymentFour(true);
 	  
-	  Thread.sleep(5000);
+	  Thread.sleep(2000);
 	  Boolean value=option.setButton(true);
 	  
-	  Thread.sleep(5000);
+	  Thread.sleep(2000);
       String text=option.getTitle();
 	  
 	  System.out.println("Is button enabled: "+value);
